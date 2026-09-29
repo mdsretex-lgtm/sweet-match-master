@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Sweet Match Master</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- YouTube Playables SDK -->
+  <script src="https://www.youtube.com/game_api/v1/ytgame.js"></script>
+</head>
+<body>
+  <div id="app" class="app-container">
+
+    <!-- MENU SCREEN -->
+    <section id="menu-screen" class="screen active">
+
+      <!-- Background Decorative Elements -->
+      <div class="menu-bg-decorations" aria-hidden="true">
+        <div class="bg-glow"></div>
+        <div class="sparkle s1">⭐</div>
+        <div class="sparkle s2">✨</div>
+        <div class="sparkle s3">⭐</div>
+        <div class="sparkle s4">✨</div>
+        
+        <!-- Floating Decorative Cards -->
+        <div class="floating-card fc-tl">❤️</div>
+        <div class="floating-card fc-tr">🐱</div>
+        <div class="floating-card fc-bl">⭐</div>
+        <div class="floating-card fc-br">🍓</div>
+
+        <!-- Clouds -->
+        <div class="cloud cloud-left"></div>
+        <div class="cloud cloud-right"></div>
+      </div>
+
+      <!-- Main Menu Content -->
+      <div class="menu-content">
+
+        <header class="menu-header">
+          <div class="game-title-container">
+            <span class="title-sweet">SWEET</span>
+            <span class="title-match">MATCH</span>
+            <span class="title-master">MASTER</span>
+          </div>
+
+          <div class="subtitle-pill">
+            <span>Find the pairs, challenge your memory!</span>
+          </div>
+        </header>
+
+        <div class="section-heading">
+          <span class="heading-line"></span>
+          <span>SELECT GRID SIZE</span>
+          <span class="heading-line"></span>
+        </div>
+
+        <div class="difficulty-selector">
+          <div class="button-group">
+
+            <!-- EASY -->
+            <button
+              type="button"
+              class="btn btn-diff btn-diff-card card-easy"
+              data-size="2"
+              data-time="20"
+              aria-label="Start Easy 2 by 2 game"
+            >
+              <div class="card-preview grid-2x2">
+                <span class="mini-tile">❤️</span>
+                <span class="mini-tile">⭐</span>
+                <span class="mini-tile">🐱</span>
+                <span class="mini-tile">🍓</span>
+              </div>
+              <div class="card-info">
+                <span class="card-size">2x2</span>
+                <span class="card-title">Easy</span>
+                <span class="card-desc">Perfect for beginners</span>
+              </div>
+            </button>
+
+            <!-- MEDIUM -->
+            <button
+              type="button"
+              class="btn btn-diff btn-diff-card card-medium"
+              data-size="4"
+              data-time="45"
+              aria-label="Start Medium 4 by 4 game"
+            >
+              <div class="card-preview grid-4x4">
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+              </div>
+              <div class="card-info">
+                <span class="card-size">4x4</span>
+                <span class="card-title">Medium</span>
+                <span class="card-desc">A fun challenge</span>
+              </div>
+            </button>
+
+            <!-- HARD -->
+            <button
+              type="button"
+              class="btn btn-diff btn-diff-card card-hard"
+              data-size="6"
+              data-time="120"
+              aria-label="Start Hard 6 by 6 game"
+            >
+              <div class="card-preview grid-6x6">
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+                <span class="mini-tile">?</span>
+              </div>
+              <div class="card-info">
+                <span class="card-size">6x6</span>
+                <span class="card-title">Hard</span>
+                <span class="card-desc">For memory masters</span>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <footer class="footer-panel">
+          <span class="brain-icon">🧠</span>
+          <span>Sharpen your mind. Match the fun!</span>
+        </footer>
+
+      </div>
+
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="game-screen" class="screen">
+      <header class="hud">
+        <button id="btn-back" class="btn-icon" aria-label="Back to Menu">‹</button>
+
+        <div class="progress-bar-container">
+          <div id="timer-progress" class="progress-bar"></div>
+        </div>
+
+        <button
+          id="sound-toggle"
+          class="sound-toggle"
+          type="button"
+          aria-label="Mute sound"
+          aria-pressed="false">
+          🔊
+        </button>
+
+        <div class="high-score-badge">
+          <span class="badge-label">HIGH SCORE</span>
+          <span id="hud-high-score" class="badge-value">0</span>
+        </div>
+      </header>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-label">TIME LEFT</span>
+          <span id="stat-time" class="stat-value">60</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-label">MOVES</span>
+          <span id="stat-moves" class="stat-value">0</span>
+        </div>
+      </div>
+
+      <main class="grid-wrapper">
+        <div id="card-grid" class="card-grid"></div>
+      </main>
+    </section>
+
+    <!-- RESULT OVERLAY -->
+    <div id="result-overlay" class="overlay hidden">
+      <div class="dialog-card">
+        <div id="result-star" class="star-icon hidden">★</div>
+        <h2 id="result-title">WELL DONE!</h2>
+        <div class="result-divider"></div>
+        <div class="result-rows">
+          <div class="result-row">
+            <span>SCORE</span>
+            <span id="res-score" class="val-highlight">0</span>
+          </div>
+          <div class="result-row">
+            <span>MOVES</span>
+            <span id="res-moves">0</span>
+          </div>
+          <div class="result-row">
+            <span>HIGH SCORE</span>
+            <span id="res-highscore" class="val-amber">0</span>
+          </div>
+        </div>
+        <button id="btn-play-again" class="btn btn-primary">PLAY AGAIN</button>
+        <button id="btn-menu" class="btn btn-secondary">BACK TO MENU</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
